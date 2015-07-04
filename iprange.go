@@ -49,7 +49,7 @@ func (r *Range) Include(addr net.IP) bool {
 	return false
 }
 
-func (r *Range) InlucdeTCP(conn *net.TCPConn) bool {
+func (r *Range) InlucdeConn(conn net.Conn) bool {
 	addr, _ := conn.RemoteAddr().(*net.TCPAddr)
 	return r.Include(addr.IP)
 }

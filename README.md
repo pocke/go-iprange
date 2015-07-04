@@ -68,5 +68,5 @@ if err != nil {
 
 l, _ := net.ListenTCP("tcp", addr)
 conn, err := l.Accept()
-r.IncludeTCP(conn)
+r.IncludeConn(conn)
 ```

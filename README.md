@@ -47,6 +47,17 @@ r.IncludeStr("192.168.1.1") // => true
 r.IncludeStr("172.0.10.11") // => true
 ```
 
+IPv6
+
+```go
+r, err = iprange.New("2001:0db8:bd05:01d2:288a:1fc0:0001:10ee")
+if err != nil {
+  panic(err)
+}
+r.IncludeStr("2001:0db8:bd05:01d2:288a:1fc0:0001:10ee") // => false
+r.IncludeStr("192.168.0.1") // => false
+```
+
 With TCP connection.
 
 ```go

@@ -1,6 +1,9 @@
 go-iprange
 ==========
 
+[![Build Status](https://travis-ci.org/pocke/go-iprange.svg?branch=master)](https://travis-ci.org/pocke/go-iprange)
+[![Coverage Status](https://coveralls.io/repos/pocke/go-iprange/badge.svg?branch=master)](https://coveralls.io/r/pocke/go-iprange?branch=master)
+
 Installation
 --------------
 

@@ -40,8 +40,7 @@ func (r *Range) IncludeStr(addr string) bool {
 
 func (r *Range) Include(addr net.IP) bool {
 	for _, m := range r.allows {
-		masked := addr.Mask(m.Mask)
-		if masked.Equal(m.IP) {
+		if m.Contains(addr) {
 			return true
 		}
 	}

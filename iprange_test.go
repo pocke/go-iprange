@@ -29,4 +29,7 @@ func TestIncludeStr(t *testing.T) {
 
 	assert("2001:0db8:bd05:01d2:288a:1fc0:0001:10ee", "2001:0db8:bd05:01d2:288a:1fc0:0001:10ee", true)
 	assert("2001:0db8:bd05:01d2:288a:1fc0:0001:10ee", "192.168.0.1", false)
+
+	assert("0.0.0.0/0,::0", "127.0.0.1", true)
+	assert("0.0.0.0/0,::/0", "::1", true)
 }
